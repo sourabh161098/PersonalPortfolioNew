@@ -7,6 +7,10 @@ export const profile = {
   email: 'patilss1610@gmail.com',
   phone: '+91 7219348002',
   linkedin: 'https://www.linkedin.com/in/sourabh-patil-4413aa183',
+  // Direct-download form of the Google Drive share link.
+  // The Drive file must be shared as "Anyone with the link" for this to work.
+  resume:
+    'https://drive.google.com/uc?export=download&id=1xwnWQsVqHIxLRAAsdyddlG9ZMERXfH1m',
   summary:
     'Frontend Engineer with 4+ years of experience specializing in crafting robust web applications. Proficient in JavaScript, ES6+, and modern front-end technologies. Experienced in building responsive UI components with React and state management with Redux, collaborating with cross-functional teams to deliver solutions that meet business objectives.',
 }

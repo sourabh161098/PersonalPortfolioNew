@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { profile, stats } from '../../data/content'
+import ProfileAvatar from '../ProfileAvatar'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -16,30 +17,45 @@ export default function Hero() {
       id="home"
       className="relative flex min-h-screen items-center overflow-hidden pb-16 pt-28 md:pt-24"
     >
-      <div className="container-x grid w-full items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
-        {/* left: intro */}
-        <div className="min-w-0">
-          <motion.p
+      <div className="container-x w-full">
+        {/* top row: tag line, then photo + heading (side by side on desktop) */}
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          custom={0}
+          className="section-tag !text-lime"
+        >
+          {profile.role} · {profile.location}
+        </motion.p>
+
+        <div className="lg:flex lg:items-center lg:gap-12">
+          <motion.div
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            custom={0}
-            className="section-tag !text-lime"
+            custom={1}
+            className="mb-9 mt-2 flex shrink-0 justify-center lg:mb-0 lg:justify-start"
           >
-            {profile.role} · {profile.location}
-          </motion.p>
+            <ProfileAvatar />
+          </motion.div>
 
           <motion.h1
             variants={fadeUp}
             initial="hidden"
             animate="show"
             custom={1}
-            className="text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
+            className="min-w-0 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Hi, I'm <span className="gradient-text">Sourabh</span>.
             <br />
             <span className="text-dim">I build for</span> the web.
           </motion.h1>
+        </div>
+
+      <div className="mt-6 grid w-full items-center gap-10 lg:mt-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+        {/* left: intro */}
+        <div className="min-w-0">
 
           <motion.p
             variants={fadeUp}
@@ -80,6 +96,26 @@ export default function Hero() {
             >
               Get in touch
             </a>
+            <a
+              href={profile.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 rounded-xl border border-line/20 px-6 py-3 font-medium text-text transition-colors hover:border-accent hover:text-accent"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-4 w-4 transition-transform group-hover:translate-y-0.5"
+                aria-hidden="true"
+              >
+                <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
+              </svg>
+              Resume
+            </a>
           </motion.div>
 
           {/* stats strip */}
@@ -108,8 +144,9 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.94, y: 24 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full min-w-0 max-w-md lg:mx-0 lg:max-w-none"
+          className="relative mx-auto flex w-full min-w-0 max-w-md flex-col items-center gap-8 lg:mx-0 lg:max-w-none"
         >
+          <div className="relative w-full">
           <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-accent/30 to-lime/20 opacity-40 blur-2xl" />
           <div className="relative overflow-hidden rounded-2xl border border-line/10 bg-surface/80 backdrop-blur">
             <div className="flex items-center gap-2 border-b border-line/10 bg-line/5 px-4 py-3">
@@ -144,7 +181,9 @@ export default function Hero() {
               </code>
             </pre>
           </div>
+          </div>
         </motion.div>
+      </div>
       </div>
 
       {/* scroll cue */}

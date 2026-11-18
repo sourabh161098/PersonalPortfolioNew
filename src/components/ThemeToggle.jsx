@@ -13,7 +13,7 @@ export default function ThemeToggle({ className = '' }) {
       onClick={toggle}
       aria-label={isLight ? 'Switch to dark mode' : 'Switch to light mode'}
       title={isLight ? 'Switch to dark mode' : 'Switch to light mode'}
-      className={`relative grid h-10 w-10 place-items-center rounded-lg border border-line/10 text-dim transition-colors hover:border-accent/50 hover:text-accent ${className}`}
+      className={`relative grid h-10 w-10 place-items-center rounded-lg text-dim transition-colors hover:text-accent ${className}`}
     >
       <span className="relative block h-5 w-5">
         {/* Sun (shown in light mode) */}
