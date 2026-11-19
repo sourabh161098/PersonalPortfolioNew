@@ -2,7 +2,7 @@ export const profile = {
   name: 'Sourabh Patil',
   role: 'Frontend Engineer',
   tagline: 'I craft robust, delightful web experiences.',
-  years: '4+',
+  years: '5+',
   location: 'Bangalore, India',
   email: 'patilss1610@gmail.com',
   phone: '+91 7219348002',
@@ -12,11 +12,11 @@ export const profile = {
   resume:
     'https://drive.google.com/uc?export=download&id=1xwnWQsVqHIxLRAAsdyddlG9ZMERXfH1m',
   summary:
-    'Frontend Engineer with 4+ years of experience specializing in crafting robust web applications. Proficient in JavaScript, ES6+, and modern front-end technologies. Experienced in building responsive UI components with React and state management with Redux, collaborating with cross-functional teams to deliver solutions that meet business objectives.',
+    'Frontend Engineer with 5+ years of experience specializing in crafting robust web applications. Proficient in JavaScript, ES6+, and modern front-end technologies. Experienced in building responsive UI components with React and state management with Redux, collaborating with cross-functional teams to deliver solutions that meet business objectives.',
 }
 
 export const stats = [
-  { value: '4+', label: 'Years building for the web' },
+  { value: '5+', label: 'Years building for the web' },
   { value: '10+', label: 'Storefront widgets shipped' },
   { value: '70%', label: 'Peak performance gains delivered' },
   { value: '2', label: 'ServiceNow certifications' },
